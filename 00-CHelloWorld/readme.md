@@ -3,10 +3,10 @@
 
 -> Compilador c18 💻
 
-Este TP es un "Hello, World!" en C.\n
--> Creacion de Makefile\n
--> Print de mensaje en consola\n
--> Print de mensaje en un archivo output.txt\n
+Este TP es un "Hello, World!" en C.<br />
+-> Creacion de Makefile<br />
+-> Print de mensaje en consola<br />
+-> Print de mensaje en un archivo output.txt<br />
 -> Seteo del entorno de trabajo, compilación y ejecución.
 
 

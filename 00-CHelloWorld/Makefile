@@ -6,8 +6,8 @@ CFLAGS = -std=c18
 
 
 $(BIN): $(OBJ)
-$(CC) $(OBJ) -o $(BIN) $(CFLAGS)
+	$(CC) $(OBJ) -o $(BIN) $(CFLAGS)
 run: $(BIN)
-$(BIN)
+	$(BIN)
 $(OBJ): $(SOURCE)
-$(CC) -c $(SOURCE) -o $(OBJ) $(CFLAGS)
+	$(CC) -c $(SOURCE) -o $(OBJ) $(CFLAGS)

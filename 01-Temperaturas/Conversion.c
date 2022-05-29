@@ -2,9 +2,11 @@
 #include "Conversion.h"
 
 int main(void) {
-   int const limiteInferior = -25;
-   int const limiteSuperior = 50;
+   double const limiteInferior = 5;
+   double const limiteSuperior = 50;
    int const incremento = 1;
    
    PrintTablas(limiteInferior, limiteSuperior, incremento);
+   // Para prevenir que se cierre la consola:
+   getchar();
 }

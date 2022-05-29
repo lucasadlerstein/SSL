@@ -1,14 +1,9 @@
 #include <stdio.h>
 
-double CelToFahr(double cel);
-double FahrToCel(double fahr);
-
-double CelToFahr(double cel) {
-    double fahr = (cel * (9.0/5.0)) + 32; 
-    return fahr;
-}
-
-double FahrToCel(double fahr) {
-    double cel = (fahr - 32) * (5.0/9.0);
-    return cel;
-}
+void PrintTablas(double inf, double sup, double inc);
+void PrintTablaCelsius(double inf, double sup, double inc);
+void PrintTablaFahrenheit(double inf, double sup, double inc);
+void PrintFilas(double inf, double sup, double inc, double funcionConversion());
+void PrintFila(double from, double to);
+double Fahrenheit(double cel);
+double Celsius(double fahr);

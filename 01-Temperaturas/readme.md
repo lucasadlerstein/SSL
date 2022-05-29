@@ -5,22 +5,22 @@
 
 Este TP es una tabla de conversión de Fahrenheit a Celsius y viceversa en C.<br /><br /><br />
 ### Objetivos:
--> Aplicar el uso de interfaces y módulos.
--> Construir un programa formado por más de una unidad de traducción.
--> Comprender el proceso de traducción o Build cuando intervienen varios archivos fuente.
--> Aplicar el uso de Makefile.
-<br/><br/>
+<br/>-> Aplicar el uso de interfaces y módulos.
+<br/>-> Construir un programa formado por más de una unidad de traducción.
+<br/>-> Comprender el proceso de traducción o Build cuando intervienen varios archivos fuente.
+<br/>-> Aplicar el uso de Makefile.
+<br/><br/><br/>
 ### Temas:
--> Makefile.
--> Archivos header (.h).
--> Tipo de dato double.
--> Funciones.
--> Pruebas unitarias.
--> Assert.
--> Interfaces e Implementación.
+<br/>-> Makefile.
+<br/>-> Archivos header (.h).
+<br/>-> Tipo de dato double.
+<br/>-> Funciones.
+<br/>-> Pruebas unitarias.
+<br/>-> Assert.
+<br/>-> Interfaces e Implementación.
 
-
+<br/><br/><br/>
 ## Ejecución:
 
-1. Usar comando "make" para compilar.
+1. Usar comando "make" para compilar.<br/>
 2. Ejecutar TablasDeConversion.exe

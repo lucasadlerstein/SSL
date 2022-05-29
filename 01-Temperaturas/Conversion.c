@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "Conversion.h"
-#include "TablasDeConversion.c"
 
 int main(void) {
    int const limiteInferior = -25;

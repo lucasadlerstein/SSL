@@ -1,8 +1,8 @@
 # SSL - Lucas Adlerstein - Curso K2051
 -> Sintaxis y Semántica de los Lenguajes
--> Año 2022
--> Curso K2051
--> Legajo 203.340-9
+<br/>-> Año 2022
+<br/>-> Curso K2051
+<br/>-> Legajo 203.340-9
 
 <br/><br/>
 # Trabajos Prácticos

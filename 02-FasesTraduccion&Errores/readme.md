@@ -1,14 +1,14 @@
 # Trabajo Práctico TP2
 ## Tp2: Fases de Traducción y Errores
 
-<br /><br /><br />
+<br />
 
 ### Objetivo principal:
-<br/>-> Identificar fases del proceso de traducción o Build y posibles errores asociados a cada fase.
+-> Identificar fases del proceso de traducción o Build y posibles errores asociados a cada fase.
 <br/><br/><br/>
 
 ### Temas:
-<br/>• Fases de traducción.
+• Fases de traducción.
 <br/>• Preprocesamiento.
 <br/>• Compilación.
 <br/>• Ensamblado.
@@ -18,14 +18,12 @@
 <br/><br/><br/>
 
 ## Bibliografía adicional utilizada:
-<br/>--> https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+--> https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
 <br/><br/><br/>
 
 ## Secuencia de Pasos:
-<br/><br/>
 
 ### 1. Preprocesador
-<br/><br/>
 b.  $ gcc -E hello2.c -Wall -o hello2.i -S
 <br/>Preprocesa perfectamente. El comentario es reemplazado por un espacio, eso hace que no afecte el programa y no quede intmain.. todo junto. En ese caso no sería reconocido ni “int” ni “main”.
 <br/><br/>
@@ -38,7 +36,6 @@ e. La diferencia “numérica” son unas 1033 líneas.
 <br/><br/><br/>
 
 ### 2. Compilación
-<br/><br/>
 a. Presenta un error sintactico, de como escribimos.
 <br/><br/>
 b.  gcc -S hello3.i -o hello3.s
@@ -53,5 +50,4 @@ d.  as -o hello4.o hello4.s -Wall
 <br/><br/><br/>
 
 ### 3. Vinculación
-<br/><br/>
 --> Comenzaremos la próxima clase con Vinculación.

@@ -41,7 +41,7 @@ c. El código en lenguaje ensamblador lo que hace es en el main pushear usando p
 <br/><br/>
 d.  as -o hello4.o hello4.s -Wall
 
-<br/><br/>
+<br/>
 
 ### 3. Vinculación
 --> Comenzaremos la próxima clase con Vinculación.

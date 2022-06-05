@@ -1,11 +1,9 @@
 # Trabajo Práctico TP2
 ## Tp2: Fases de Traducción y Errores
 
-<br />
-
 ### Objetivo principal:
 -> Identificar fases del proceso de traducción o Build y posibles errores asociados a cada fase.
-<br/><br/><br/>
+<br/><br/>
 
 ### Temas:
 • Fases de traducción.
@@ -15,11 +13,7 @@
 <br/>• Vinculación (Link).
 <br/>• Errores en cada fase.
 <br/>• Compilación separada.
-<br/><br/><br/>
-
-## Bibliografía adicional utilizada:
---> https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
-<br/><br/><br/>
+<br/><br/>
 
 ## Secuencia de Pasos:
 
@@ -33,7 +27,7 @@ e. La diferencia “numérica” son unas 1033 líneas.
 <br/>→ hello2.i tiene 1043 líneas.
 <br/>→ hello3.i tiene 10 líneas.
 <br/>La versión 3 solo “importa” al .i el encabezado de la función printf mientras que en el la versión 2, se importa toda la biblioteca stdio incluyendo otras funciones como wscanf por ejemplo.
-<br/><br/><br/>
+<br/><br/>
 
 ### 2. Compilación
 a. Presenta un error sintactico, de como escribimos.
@@ -47,7 +41,12 @@ c. El código en lenguaje ensamblador lo que hace es en el main pushear usando p
 <br/><br/>
 d.  as -o hello4.o hello4.s -Wall
 
-<br/><br/><br/>
+<br/><br/>
 
 ### 3. Vinculación
 --> Comenzaremos la próxima clase con Vinculación.
+<br/><br/>
+
+## Bibliografía adicional utilizada:
+--> https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+<br/><br/>

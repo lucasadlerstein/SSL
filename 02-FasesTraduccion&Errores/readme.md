@@ -44,8 +44,70 @@ d.  as -o hello4.o hello4.s -Wall
 <br/>
 
 ### 3. Vinculación
---> Comenzaremos la próxima clase con Vinculación.
+a. Ejecutando "gcc hello4.o" devuelve un error: "undefined reference to `prontf'
+collect2: error: ld returned 1 exit status". No encuentra la referencia de prontf, esto es porque no encuentra la referencia de donde buscarlo... no sabe lo que es porque no puede encontrarlo (por no saber donde buscar).
 <br/><br/>
+b. Cambiando el prOntf por un prIntf se soluciona. Ahí si sabe donde encontrarlo.
+<br/><br/>
+c. Se general el hello5.exe y funciona, devuelve el texto esperado.
+<br/><br/>
+
+### 4. Corrección de BUG
+a. El avast se manifiesta :), pero la consola devuelve "La respuesta es 42", así que funciona perfecto.
+<br/><br/>
+
+### 5. Remoción del Prototipo
+a. 
+<br/>
+```
+$ gcc hello7.c -o hello7.exe
+hello7.c: In function ‘main’:
+hello7.c:3:5: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    3 |     printf("La respuesta es %d\n", i);
+      |     ^~~~~~
+hello7.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int main(void){
+hello7.c:3:5: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+    3 |     printf("La respuesta es %d\n", i);
+      |     ^~~~~~
+hello7.c:3:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+```
+
+<br/><br/>
+b. Funciona ya que printf es conocido y sabe donde ser encontrado aunque no aclaremos que debe buscarlo en stdio. De hecho, sabe y nos pide que INCLUYAMOS <stdio.h> o que declaremos printf. Eso hace cuando hay una declaración implicita que es conocida.
+<br/><br/>
+
+### 6. Compilación Separada: Contratos y Módulos
+
+Hay warning. No hay error de compilacion. Hay error de linkeo. El tema es con el linker (LD). El error es que no esta definida prontf. Se busca dentro del mismo directorio, cual es esa declaración que falta, donde está y la incorpora. Ese warning que hay, es un aviso de que no fue declarada de antemano.
+<br/>
+gcc es permisivo. Llama a una funcion que no esta declarada sin ningun problema.
+<br/><br/>
+c. El error es el mismo en ambos casos:
+```
+Lucas@MyLaptop MSYS /d/Lucas/Documents/UTN - Ingenieria en Sistemas/Sintaxis y Semantica de los Lenguajes/TPs/Individual/02-FasesTraduccion&Errores
+$ gcc studio1.c -o studio1.exe
+studio1.c: In function ‘prontf’:
+studio1.c:2:5: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    2 |     printf("La respuesta es %d\n", i);
+      |     ^~~~~~
+studio1.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | void prontf(const char* s, int i) {
+studio1.c:2:5: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+    2 |     printf("La respuesta es %d\n", i);
+      |     ^~~~~~
+studio1.c:2:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/bin/ld: /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/libmsys-2.0.a(libcmain.o): in function `main':
+/c/S/msys2-runtime/src/msys2-runtime/winsup/cygwin/lib/libcmain.c:37: undefined reference to `WinMain'
+collect2: error: ld returned 1 exit status
+```
+
+<br/><br/>
+
+d. Usar un contrato permite al programador, indicar al preprocesador donde buscar la función, donde está declarada para poder ser usada. Si lo declaramos, podemos indicar "exactamente" como usarse y que no sea confundido con otra función.
+<br/><br/> 
 
 ## Bibliografía adicional utilizada:
 --> https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
